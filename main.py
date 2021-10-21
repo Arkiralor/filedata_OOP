@@ -47,7 +47,7 @@ class FileReturn():
         BASE_PATH = "files/"
         with open(BASE_PATH + filename, 'rb') as file:
             file_bdata = file.read()
-            encoded_data = self.file_encode(file_bdata)
+        encoded_data = self.file_encode(file_bdata)
         return encoded_data
 
     
