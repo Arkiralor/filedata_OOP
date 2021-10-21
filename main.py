@@ -1,5 +1,5 @@
 '''
-Scripts to test out methods to be used in 'Main'.
+Main executable Python Script.
 '''
 
 from posix import ST_WRITE
