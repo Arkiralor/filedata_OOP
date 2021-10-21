@@ -2,7 +2,6 @@
 Main executable Python Script.
 '''
 
-from posix import ST_WRITE
 import requests as re
 import json as js
 import os
