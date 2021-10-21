@@ -83,7 +83,6 @@ class FileReturn():
         response = re.post(login_url, json=payload_login)
         token = response.cookies.get_dict()['csrf_access_token']
 
-        cookies = response.cookies
 
         headers = {
         'accept': '*/*',
@@ -98,12 +97,14 @@ class FileReturn():
 
         send_url = 'https://7988-103-219-61-230.ngrok.io/allure-docker-service/send-results'
 
+        new_cookies = response.cookies
+
         sent_response = re.post(
                             send_url, 
-                            headers=headers, 
-                            params=params, 
-                            json=file_tuples,
-                            cookies=cookies
+                            headers = headers, 
+                            params = params, 
+                            json = file_tuples,
+                            cookies = new_cookies
                         )
         print(sent_response.content)
         
