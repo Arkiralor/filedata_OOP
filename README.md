@@ -33,3 +33,8 @@ The script consists of four (4) modules:
 5. The list of dictionaries is then returned to the calling function.
 6. A login request is sent to the remote system and the file-transfer arguments are retrieved.
 7. The file-transfer-arguments are used to send the list of dictionaries to the remote system in 'json' format.
+  
+ ## Usage Example
+        from FileReturn import FileReturn
+        file_return = FileReturn('some/path/to/file/directory')
+        file_retun.main()
