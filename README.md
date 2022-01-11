@@ -28,8 +28,11 @@ The script consists of four (4) modules:
 3. The script then checks for all files in the given directory and stores the names in the list.
 4. The script then iterates through all the files (actually 'filenames' joined after the given 'path'.
   4.1. If the 'Last Modified Time' metadata of the file is after the timestamp in 'last-access.txt', the script parses through the file in 'binary' mode and encodes   the contents in 'base64' format.
+  
   4.2. The name and contents of the file are added to a dictionary in {'file_name': <file name>, 'contents_base64': <encoded contents>}.
+  
   4.3. The created dictionary is appended to a list of dictionaries.
+  
 5. The list of dictionaries is then returned to the calling function.
 6. A login request is sent to the remote system and the file-transfer arguments are retrieved.
 7. The file-transfer-arguments are used to send the list of dictionaries to the remote system in 'json' format.
